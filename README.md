@@ -9,12 +9,6 @@ With the rapid spread of misinformation online, detecting fake news has become c
 ## 🛠️ Tech Stack
 Python, Pandas, NumPy, Scikit-learn, NLP (TF-IDF Vectorization)
 
-## 📂 Dataset
-The dataset contains real and fake news articles:
-- Fake.csv
-- True.csv
-Each file includes title and text content.
-
 ## ⚙️ Project Structure
 fake-news-detector/
 │── main.py
@@ -22,62 +16,105 @@ fake-news-detector/
 │── train.py
 │── requirements.txt
 │── README.md
-│── data/
-    │── Fake.csv
-    │── True.csv
+│── data/   (you must create this folder)
 
 ## 🚀 Setup and Execution Guide
 
 ### 1. Prerequisites
 Ensure you have Python 3.8 or higher and pip installed.
-Check using:
-python --version
-pip --version
+
+Check:
+python --version  
+pip --version  
+
+---
 
 ### 2. Clone the Repository
-git clone https://github.com/your-username/fake-news-detector
-cd fake-news-detector
+git clone https://github.com/your-username/fake-news-detector  
+cd fake-news-detector  
+
+---
 
 ### 3. Create Virtual Environment (Recommended)
-python -m venv venv
+python -m venv venv  
 
 Activate:
+
 Windows:
-venv\Scripts\activate
+venv\Scripts\activate  
+
 macOS/Linux:
-source venv/bin/activate
+source venv/bin/activate  
+
+---
 
 ### 4. Install Dependencies
-pip install -r requirements.txt
+pip install -r requirements.txt  
 
-### 5. Dataset Setup
-Download Fake.csv and True.csv files.
-Create a folder named data in the project root and place files inside:
+---
+
+### 5. Dataset Setup (IMPORTANT)
+
+Since dataset files are large, they are not included in this repository.
+
+Follow these steps:
+
+1. Go to the dataset link:  
+https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset  
+
+2. Download the dataset as a ZIP file  
+
+3. Extract (unzip) the downloaded file  
+
+4. You will get:
+   - Fake.csv  
+   - True.csv  
+
+5. Create a folder named `data` inside the project directory  
+
+6. Place both files inside:
 data/
-│── Fake.csv
-│── True.csv
+│── Fake.csv  
+│── True.csv  
+
+---
 
 ### 6. Train the Model
-python train.py
-This will process the dataset, train the model, and save model.pkl and vectorizer.pkl.
+python train.py  
+
+This step will:
+- Load dataset  
+- Train the model  
+- Save model.pkl and vectorizer.pkl  
+
+---
 
 ### 7. Run the Application
-python main.py
+python main.py  
+
+---
 
 ### 8. Provide Input
 Enter any news text when prompted.
+
 Example:
 Enter news text:
 Government announces new economic reforms...
 
 Output:
-Prediction: Real News
+Prediction: Real News  
+
+---
 
 ## 💡 How It Works
-The dataset is loaded and labeled (Real = 1, Fake = 0). Text data is converted into numerical form using TF-IDF vectorization. A Logistic Regression model is trained on this data. The trained model predicts whether new input news is real or fake.
+The dataset is labeled (Real = 1, Fake = 0). Text data is converted into numerical form using TF-IDF vectorization. A Logistic Regression model is trained and used to predict whether input news is real or fake.
+
+---
 
 ## 📊 Model Performance
-The model is evaluated using accuracy on test data. Accuracy can be printed inside train.py.
+The model is evaluated using accuracy on test data (printed in train.py).
+
+---
 
 ## 🔍 Features
 - NLP-based fake news detection  
@@ -86,10 +123,14 @@ The model is evaluated using accuracy on test data. Accuracy can be printed insi
 - Command-line interface (CLI)  
 - Easy to set up and run  
 
+---
+
 ## ⚠️ Limitations
 - Depends on dataset quality  
 - May not generalize to all news sources  
 - Detects patterns, not factual truth  
+
+---
 
 ## 🚀 Future Improvements
 - Add deep learning models (LSTM, BERT)  
@@ -97,8 +138,13 @@ The model is evaluated using accuracy on test data. Accuracy can be printed insi
 - Improve preprocessing  
 - Use larger datasets  
 
+---
+
 ## 👨‍💻 Author
-Your Name
+Abhijeet Mukherjee
+25BAI10476
+
+---
 
 ## 📜 License
 This project is for educational purposes only.
